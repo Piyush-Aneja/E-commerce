@@ -5,7 +5,7 @@ import "./cart.css";
 
 export const Cart = (props) => {
   function removeFromCart(item) {
-    console.log("remove item from cart:", item);
+    // console.log("remove item from cart:", item);
     axios.post("/removeItem", {
       product_id: props.product_id,
       user_id: props.user_id,
@@ -14,7 +14,7 @@ export const Cart = (props) => {
     // window.location.reload();
   }
   // let quantityValue = 0;
-  const [quantityValue, setquantityValue] = useState(props.price);
+  const [quantityValue, setquantityValue] = useState(1);
   function setQuantity(e) {
     setquantityValue(e.target.value);
 
@@ -74,9 +74,10 @@ export const Cart = (props) => {
                 <div className="col-md-3 price">
                   <span>
                     ₹
-                    {props.price * quantityValue > 2000000
+                    {/* {props.price * quantityValue > 2000000
                       ? props.price
-                      : props.price * quantityValue}
+                      : props.price * quantityValue} */}
+                    {props.price * quantityValue}
                   </span>
                 </div>
               </div>

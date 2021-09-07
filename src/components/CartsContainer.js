@@ -50,6 +50,7 @@ export const CartsContainer = (props) => {
                     {cartItems.map((item, k) => {
                       subtotal1 = subtotal1 + item.price;
 
+
                       return (
                         <Cart
                           key={k}

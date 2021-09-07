@@ -42,6 +42,7 @@ export const Card = (props) => {
           <p className="card-text">{props.desc}</p>
           <p>
             Price: ₹<b>{props.price}</b>
+            {/* {console.log(props.price)} */}
           </p>
           {/* <input
             type="button"
