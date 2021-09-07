@@ -1,0 +1,16 @@
+.nav-link {
+  font-size: 25px;
+  color: white !important;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+html {
+  zoom: 85%;
+}
