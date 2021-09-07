@@ -50,10 +50,11 @@ export const CartsContainer = (props) => {
                     {cartItems.map((item, k) => {
                       subtotal1 = subtotal1 + item.price;
 
-
+                      console.log(item)
                       return (
                         <Cart
                           key={k}
+                          name={item.name}
                           product_id={item.product_id}
                           user_id={item.user_id}
                           url={item.url}

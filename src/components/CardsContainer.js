@@ -48,6 +48,7 @@ export const CardsContainer = (props) => {
               image={item.url}
               desc={item.description}
               price={item.price}
+              name={item.name}
               // userId={props.userId}
               userId={userData.email}
             />

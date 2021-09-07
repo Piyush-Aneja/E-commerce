@@ -15,8 +15,7 @@ export const Card = (props) => {
           user_id: item.userId,
         })
         .then((response) => {
-          console.log("item added to cart");
-
+          // console.log("item added to cart");
           // window.location.reload();
         })
         .catch((err) => console.log("error in posting:", err));
@@ -34,16 +33,24 @@ export const Card = (props) => {
   return (
     <div>
       <div className="card" style={cardStyle}>
-        <img src={props.image} className="card-img-top" alt="..."
-          height="330" width="15rem"
-
+        <img
+          src={props.image}
+          className="card-img-top"
+          alt="..."
+          height="330"
+          width="15rem"
         />
         <div className="card-body">
-          <p className="card-text">{props.desc}</p>
-          <p>
-            Price: ₹<b>{props.price}</b>
-            {/* {console.log(props.price)} */}
+          <p className="card-text">
+            {" "}
+            <b> {props.name}</b>{" "}
           </p>
+          <b>
+            <p>
+              Price: ₹{props.price}
+              {/* {console.log(props.price)} */}
+            </p>
+          </b>
           {/* <input
             type="button"
             value={btnText}

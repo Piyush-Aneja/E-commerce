@@ -17,7 +17,6 @@ export const Cart = (props) => {
   const [quantityValue, setquantityValue] = useState(1);
   function setQuantity(e) {
     setquantityValue(e.target.value);
-
   }
 
   return (
@@ -32,6 +31,10 @@ export const Cart = (props) => {
               className="img-fluid mx-auto d-block image"
               src={props.url}
               alt="not"
+              style={{
+                height: "136px",
+                width: "136px",
+              }}
             />
           </div>
           <div className="col-md-8">
@@ -39,7 +42,11 @@ export const Cart = (props) => {
               <div className="row">
                 <div className="col-md-5 product-name">
                   <div className="product-name">
-                    <a href="#0">{props.description}</a>
+                    <h5 href="#0">
+                      <b>{props.name} </b>
+                    </h5>
+                    <h6>{props.description}</h6>
+
                     <div className="product-info">
                       {/* <input
                         type="button"
@@ -51,7 +58,7 @@ export const Cart = (props) => {
                         type="button"
                         className="btn btn-outline-primary btn-sm pull-left"
                         onClick={() => removeFromCart(props)}
-                        style={{ margin: "7px" }}
+                        style={{ margin: "1px" }}
                       >
                         Remove Item
                       </button>
@@ -88,4 +95,3 @@ export const Cart = (props) => {
     </>
   );
 };
-
