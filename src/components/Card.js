@@ -18,8 +18,10 @@ export const Card = (props) => {
       setbtnText("Add to cart");
     }
   }
+
   useEffect(() => {
     checkcart();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function addtoCart(item) {
