@@ -1,4 +1,5 @@
 import React from "react";
+
 import heartImg from "../assets/heart.png";
 let FooterStyle = {
   backgroundColor: "black",

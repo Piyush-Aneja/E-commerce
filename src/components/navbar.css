@@ -1,6 +1,7 @@
 .nav-link {
   font-size: 25px;
   color: white !important;
+  
 }
 
 .nav-link:hover {
@@ -8,7 +9,7 @@
 }
 
 .active {
-  text-decoration: underline;
+  text-decoration: underline !important;
   font-weight: bold;
 }
 html {

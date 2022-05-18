@@ -19,12 +19,12 @@ export const CardsContainer = (props) => {
   const cardContainer = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, 20rem)",
-    gridTemplateRows: "repeat(auto-fit, 30rem)",
+    gridTemplateRows: "repeat(auto-fit, 32rem)",
     gap: "5px",
     marginTop: "20px",
     marginBottom: "120px",
     justifyContent: "space-between",
-    padding: "15px"
+    padding: "15px",
   };
 
   let userData = JSON.parse(localStorage.getItem("userData"));
@@ -40,16 +40,17 @@ export const CardsContainer = (props) => {
       <div className="cardContainer" style={cardContainer}>
         {/* {console.log("set cart func:", props.setcartItems)} */}
         {/* {console.log("card items", items)} */}
-        {items.map((item) => {
+        {items.map((item, k) => {
           return (
             <Card
-              key={item.product_id}
+              key={k}
               id={item.product_id}
               image={item.url}
               desc={item.description}
               price={item.price}
               name={item.name}
               // userId={props.userId}
+
               userId={userData.email}
             />
           );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Cart } from "./Cart";
 import { Checkout } from "./Checkout";
 import axios from "./axios";
+
 import "./cart.css";
 
 export const CartsContainer = (props) => {
@@ -9,16 +10,18 @@ export const CartsContainer = (props) => {
   const [cartItems, setcartItems] = useState([]);
 
   async function fetchCartData() {
-
     let userdata = JSON.parse(localStorage.getItem("userData"));
 
     // console.log(page_type);
+
     let response = await axios.get("/cart", {
       params: { userId: userdata.email },
     });
+
     setcartItems(response.data);
   }
   useEffect(() => {
+    // if (props.value === 0);
     fetchCartData();
   }, []);
   function redirectHome() {
@@ -50,7 +53,7 @@ export const CartsContainer = (props) => {
                     {cartItems.map((item, k) => {
                       subtotal1 = subtotal1 + item.price;
 
-                      console.log(item)
+                      console.log(item);
                       return (
                         <Cart
                           key={k}
@@ -75,7 +78,7 @@ export const CartsContainer = (props) => {
                   Discount={discount}
                   Shipping={shipping}
                   Total={subtotal1 - discount + shipping}
-                // setsubtotal={setsubtotal}
+                  // setsubtotal={setsubtotal}
                 />
               </div>
             </div>

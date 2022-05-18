@@ -12,7 +12,7 @@ export const Card = (props) => {
         product_id: props.id,
       },
     });
-    console.log(response.data);
+
     if (response.data.length > 0) setbtnText("Added to cart");
     else {
       setbtnText("Add to cart");
@@ -43,15 +43,64 @@ export const Card = (props) => {
     // fetchCart();
   }
   const cardStyle = {
-    height: "30rem",
+    minHeight: "31rem",
     width: "20rem",
     // backgroundColor: "red",
     objectFit: "contain",
+    marginTop: "20px",
   };
 
+  function editContent(id) {
+    document.getElementById(id).contentEditable = "true";
+  }
+  function delContent(id) {
+    axios
+      .delete("/delete", { data: { product_id: props.id } })
+      .then(() => console.log("Product Deleted.!"))
+      .catch((err) => console.log("Error:", err));
+  }
+
+  function saveContent(id) {
+    var divContent = document.getElementById(id).children[1].children;
+
+    console.log(divContent[0].firstChild.innerHTML); //name
+    console.log(divContent[0].children[2].innerHTML); //desc
+    console.log(divContent[1].firstChild); //price
+    let st = divContent[1].firstChild.innerHTML;
+    console.log(st.substring(st.indexOf("₹") + 1)); //price
+    // console.log(st.substring(st.indexOf("₹") + 1));
+    // console.log(divContent[2].firstChild.innerHTML.ind); //price
+    // console.log(divContent[1][0]);
+    let data = {
+      product_id: props.id,
+      name: `${divContent[0].firstChild.innerHTML}`,
+      description: `${divContent[0].children[2].innerHTML}`,
+      price: st.substring(st.indexOf("₹") + 1),
+      url: `${props.image}`,
+    };
+    axios
+      .put("/admin/edit/updateData", data)
+      .then(() => console.log("data updated"))
+      .catch((err) => {
+        console.log("error here:", err);
+      });
+
+    // prod_db.update(
+    //   { name: props.name, description: props.desc, price: props.price },
+    //   { where: { product_id: id } }
+    // );
+  }
+
+  let btnStyle = {
+    padding: "2px",
+    margin: "3px",
+    width: "72px",
+  };
   return (
     <div>
-      <div className="card" style={cardStyle}>
+      {/* <div className="card" style={cardStyle} id={props.id}> */}
+      <div className="card" style={cardStyle} id={`${props.id}_card`}>
+        {/* {`${x._id}_name`} */}
         <img
           src={props.image}
           className="card-img-top"
@@ -61,26 +110,57 @@ export const Card = (props) => {
         />
         <div className="card-body">
           <p className="card-text">
-            <b> {props.name}</b>
+            <b name="title">{props.name}</b>
+            <br />
+            <span className="card-text" name="desc">
+              {props.desc}
+            </span>
           </p>
           <b>
-            <p>
+            <p name="price">
               Price: ₹{props.price}
               {/* {console.log(props.price)} */}
             </p>
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              // value={btnText}
+              onClick={() => addtoCart(props)}
+              disabled={btnText === "Add to cart" ? false : true}
+              style={{ margin: "auto" }}
+            >
+              {btnText}
+            </button>
           </b>
-
-          <button
-            type="button"
-            className="btn btn-outline-primary"
-            // value={btnText}
-            onClick={() => addtoCart(props)}
-            disabled={btnText === "Add to cart" ? false : true}
-            style={{ margin: "auto" }}
-          >
-            {btnText}
-          </button>
         </div>
+        {props.edit ? (
+          <>
+            <span>
+              <input
+                style={btnStyle}
+                type="button"
+                value="edit"
+                onClick={() => editContent(`${props.id}_card`)}
+              />
+              {/* <br /> */}
+              <input
+                style={btnStyle}
+                type="button"
+                value="save"
+                onClick={() => saveContent(`${props.id}_card`)}
+              />
+              {/* <br /> */}
+              <input
+                style={btnStyle}
+                type="button"
+                value="Delete"
+                onClick={() => delContent(`${props.id}_card`)}
+              />
+            </span>
+          </>
+        ) : (
+          <> </>
+        )}
       </div>
     </div>
   );

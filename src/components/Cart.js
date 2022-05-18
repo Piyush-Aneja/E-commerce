@@ -47,22 +47,23 @@ export const Cart = (props) => {
                     </h5>
                     <h6>{props.description}</h6>
 
-                    <div className="product-info">
-                      {/* <input
+                    {/* <div className="product-info"> */}
+                    {/* <input
                         type="button"
                         value="remove item"
                         onClick={() => removeFromCart(props)}
                       /> */}
-                      <button
-                        id="removeFromCartBtn"
-                        type="button"
-                        className="btn btn-outline-primary btn-sm pull-left"
-                        onClick={() => removeFromCart(props)}
-                        style={{ margin: "1px" }}
-                      >
-                        Remove Item
-                      </button>
-                    </div>
+
+                    <button
+                      id="removeFromCartBtn"
+                      type="button"
+                      className="btn btn-outline-primary btn-sm pull-left"
+                      onClick={() => removeFromCart(props)}
+                      style={{ margin: "1px" }}
+                    >
+                      Remove Item
+                    </button>
+                    {/* </div> */}
                   </div>
                 </div>
                 <div className="col-md-4 quantity">
