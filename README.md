@@ -1,70 +1,32 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<b>Login Page </b>
+<br/>
+<br/>
+![Picture1](https://user-images.githubusercontent.com/58240852/169108876-9724de99-31cb-4123-bbe7-b6751bef0e10.png)
+<br/>
+<br/>
+ <b>User's View of products page: </b>
+<br/>
+<br/>
+![Picture2](https://user-images.githubusercontent.com/58240852/169109247-8a387593-f4e6-4e44-9fc9-a2f407287410.png)
+<br/>
+<br/>
+<b>Responsiveness: </b>
+<br/>
+![Picture3](https://user-images.githubusercontent.com/58240852/169109254-a80e4542-db4f-4b41-8570-1fb14646179a.png)
+<br/>
+<b> User's Cart View: </b> <br/>
+<br/>
+![Picture4](https://user-images.githubusercontent.com/58240852/169109260-7feb2209-f2ce-406b-90d1-045cdad2b296.png)
+<br/>
+<br/>
+<b> Payment Gateway: </b>
+<br/>
+<br/>
+![Picture5](https://user-images.githubusercontent.com/58240852/169109264-82aa555b-95c1-4423-bfbe-062d072f4123.png)
+<br/>
+<br/>
+<b>Admin View: </b> <br/>
+Admin can add a product or edit/delete it. <br/>
+Cards are made editable by clicking on "edit" button for easy editing by admin.<br/><br/>
+![Picture6](https://user-images.githubusercontent.com/58240852/169109266-b1f2ceba-183d-46c8-869f-b11ea6c26070.png)
+<br/>
